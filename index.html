@@ -194,15 +194,15 @@
                                                                 },
                                                                 "Renter Average Rating":
                                                                     {
-                                                                        type: "string",
+                                                                        type: "number",
                                                                     },
                                                                 "Total no of ratings":
                                                                     {
-                                                                        type: "string",
+                                                                        type: "number",
                                                                     },
                                                                 "Total no of negative reviews":
                                                                     {
-                                                                        type: "string",
+                                                                        type: "number",
                                                                     },
                                                                 "Renter ID": {
                                                                     type: "string",
@@ -235,12 +235,34 @@
                                                                             {
                                                                                 "Rating total":
                                                                                     {
-                                                                                        type: "string",
+                                                                                        type: "number",
                                                                                     },
                                                                                 Description:
                                                                                     {
                                                                                         type: "string",
                                                                                     },
+                                                                                Rating: {
+                                                                                    type: "object",
+                                                                                    properties:
+                                                                                        {
+                                                                                            "Were there any issues with Communication?":
+                                                                                                {
+                                                                                                    type: "number",
+                                                                                                },
+                                                                                            "Were there any issues with maintenance or Cleanliness?":
+                                                                                                {
+                                                                                                    type: "number",
+                                                                                                },
+                                                                                            "Were there any issues following House Rules?":
+                                                                                                {
+                                                                                                    type: "number",
+                                                                                                },
+                                                                                            "Were there any issues with payments?":
+                                                                                                {
+                                                                                                    type: "number",
+                                                                                                },
+                                                                                        },
+                                                                                },
                                                                             },
                                                                     },
                                                                 },
@@ -253,6 +275,7 @@
                                                 },
                                             },
                                         },
+
                                         400: {
                                             description: "Workflow failure",
                                             schema: {
@@ -761,24 +784,6 @@
                                                 },
                                             },
                                         },
-                                        400: {
-                                            description: "Workflow failure",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    status: {
-                                                        type: "string",
-                                                        description:
-                                                            "Outcome of the workflow",
-                                                    },
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the workflow",
-                                                    },
-                                                },
-                                            },
-                                        },
                                         401: {
                                             description: "Permission denied",
                                             schema: {
@@ -1035,7 +1040,7 @@
                                             type: {
                                                 type: "string",
                                             },
-                                            
+                                            value: "1742555683647x682435536114414100",
                                         },
                                         {
                                             name: "renter_name",
@@ -1046,7 +1051,7 @@
                                             type: {
                                                 type: "string",
                                             },
-                                            
+                                            value: "Test Zap",
                                         },
                                         {
                                             name: "rent_decision",
@@ -1057,7 +1062,7 @@
                                             type: {
                                                 type: "string",
                                             },
-                                            
+                                            value: "No",
                                         },
                                         {
                                             name: "rating_total",
@@ -1068,7 +1073,7 @@
                                             type: {
                                                 type: "number",
                                             },
-                                            
+                                            value: 2.75,
                                         },
                                         {
                                             name: "total_reviews",
@@ -1079,7 +1084,7 @@
                                             type: {
                                                 type: "integer",
                                             },
-                                            
+                                            value: 3,
                                         },
                                     ],
                                     tags: ["Workflow"],
@@ -1099,36 +1104,46 @@
                                                         type: "string",
                                                         description:
                                                             "Error details if any",
+                                                        example: "",
                                                     },
                                                     results: {
-                                                        type: "object",
-                                                        properties: {
-                                                            "Renter ID": {
-                                                                type: "string",
-                                                                
-                                                            },
-                                                            "Renter Name": {
-                                                                type: "string",
-                                                                
-                                                            },
-                                                            "Would you like to rent this person?":
-                                                                {
+                                                        type: "array",
+                                                        items: {
+                                                            type: "object",
+                                                            properties: {
+                                                                "Renter ID": {
                                                                     type: "string",
-                                                                   
+                                                                    example:
+                                                                        "1742555683647x682435536114414100",
                                                                 },
-                                                            "Rating Total": {
-                                                                type: "number",
-                                                                
-                                                            },
-                                                            "Total Reviews": {
-                                                                type: "integer",
-                                                                
+                                                                "Renter Name": {
+                                                                    type: "string",
+                                                                    example:
+                                                                        "Test Zap",
+                                                                },
+                                                                "Would you like to rent this person?":
+                                                                    {
+                                                                        type: "string",
+                                                                        example:
+                                                                            "No",
+                                                                    },
+                                                                "Rating Total":
+                                                                    {
+                                                                        type: "number",
+                                                                        example: 2.75,
+                                                                    },
+                                                                "Total Reviews":
+                                                                    {
+                                                                        type: "integer",
+                                                                        example: 3,
+                                                                    },
                                                             },
                                                         },
                                                     },
                                                 },
                                             },
                                         },
+
                                         400: {
                                             description: "Workflow failure",
                                             schema: {
