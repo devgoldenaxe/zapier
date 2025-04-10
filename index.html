@@ -27,7 +27,7 @@
                             },
                         },
                         host: "mayistay.com",
-                        basePath: "/version-test/api/1.1",
+                        basePath: "/api/1.1",
                         schemes: ["https"],
                         consumes: ["application/json"],
                         paths: {
@@ -37,130 +37,10 @@
                                         "Triggers the workflow renterdetails",
                                     parameters: [
                                         {
-                                            name: "average_rating",
-                                            in: "query",
-                                            description:
-                                                "Query parameter average_rating",
-                                            required: false,
-                                            type: {
-                                                type: "number",
-                                            },
-                                            value: 1.75,
-                                        },
-                                        {
-                                            name: "status",
-                                            in: "query",
-                                            description:
-                                                "Query parameter status",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "Active",
-                                        },
-                                        {
-                                            name: "slug",
-                                            in: "query",
-                                            description: "Query parameter slug",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "jlcdip-188",
-                                        },
-                                        {
-                                            name: "review_count",
-                                            in: "query",
-                                            description:
-                                                "Query parameter review_count",
-                                            required: false,
-                                            type: {
-                                                type: "integer",
-                                            },
-                                            value: 1,
-                                        },
-                                        {
-                                            name: "negative_reviews",
-                                            in: "query",
-                                            description:
-                                                "Query parameter negative_reviews",
-                                            required: false,
-                                            type: {
-                                                type: "integer",
-                                            },
-                                            value: 1,
-                                        },
-                                        {
-                                            name: "first_name",
-                                            in: "query",
-                                            description:
-                                                "Query parameter first_name",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "John",
-                                        },
-                                        {
-                                            name: "dob",
-                                            in: "query",
-                                            description: "Query parameter dob",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                                format: "date-time",
-                                            },
-                                            value: "2000-01-22T06:00:00.000Z",
-                                        },
-                                        {
-                                            name: "last_name",
-                                            in: "query",
-                                            description:
-                                                "Query parameter last_name",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "Doe",
-                                        },
-                                        {
-                                            name: "middle_name",
-                                            in: "query",
-                                            description:
-                                                "Query parameter middle_name",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: null,
-                                        },
-                                        {
-                                            name: "full_name",
-                                            in: "query",
-                                            description:
-                                                "Query parameter full_name",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "John Doe",
-                                        },
-                                        {
-                                            name: "saved_for_review",
-                                            in: "query",
-                                            description:
-                                                "Query parameter saved_for_review",
-                                            required: false,
-                                            type: {
-                                                type: "integer",
-                                            },
-                                            value: 0,
-                                        },
-                                        {
-                                            name: "id",
+                                            name: "renter",
                                             in: "query",
                                             description: "Query parameter id",
-                                            required: false,
+                                            required: true,
                                             type: {
                                                 type: "string",
                                             },
@@ -407,7 +287,7 @@
                                             name: "dob",
                                             in: "query",
                                             description: "Query parameter dob",
-                                            required: false,
+                                            required: true,
                                             type: {
                                                 type: "string",
                                                 format: "date-time",
@@ -451,16 +331,19 @@
                                                                 },
                                                                 "Renter Avearage Rating":
                                                                     {
-                                                                        type: "number",
+                                                                        type: "string",
                                                                     },
                                                                 "Total no of ratings":
                                                                     {
-                                                                        type: "number",
+                                                                        type: "string",
                                                                     },
                                                                 "Total no of negative reviews":
                                                                     {
-                                                                        type: "number",
+                                                                        type: "string",
                                                                     },
+                                                                "Renter ID": {
+                                                                    type: "string",
+                                                                },
                                                             },
                                                         },
                                                     },
@@ -712,17 +595,6 @@
                                         "Triggers the workflow booking_renter",
                                     parameters: [
                                         {
-                                            name: "booking_status",
-                                            in: "query",
-                                            description:
-                                                "Query parameter booking_status",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "Booked Successfully",
-                                        },
-                                        {
                                             name: "renter_id",
                                             in: "query",
                                             description:
@@ -732,6 +604,66 @@
                                                 type: "string",
                                             },
                                             value: "1742794505256x890368286827908000",
+                                        },
+                                        {
+                                            name: "renter_fname",
+                                            in: "query",
+                                            description:
+                                                "Query parameter renter_fname",
+                                            required: true,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "renter_lname",
+                                            in: "query",
+                                            description:
+                                                "Query parameter renter_lname",
+                                            required: true,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "dob",
+                                            in: "query",
+                                            description: "Query parameter dob",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                                format: "date-time",
+                                            },
+                                        },
+                                        {
+                                            name: "renter_mname",
+                                            in: "query",
+                                            description:
+                                                "Query parameter renter_mname",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "start_date",
+                                            in: "query",
+                                            description:
+                                                "Query parameter start_date",
+                                            required: true,
+                                            type: {
+                                                type: "date-time",
+                                            },
+                                        },
+                                        {
+                                            name: "end_date",
+                                            in: "query",
+                                            description:
+                                                "Query parameter end_date",
+                                            required: true,
+                                            type: {
+                                                type: "date-time",
+                                            },
                                         },
                                     ],
                                     tags: ["Workflow"],
@@ -868,15 +800,111 @@
                                     description: "Triggers the workflow save",
                                     parameters: [
                                         {
-                                            name: "review",
+                                            name: "renter",
                                             in: "query",
                                             description:
-                                                "Query parameter review",
+                                                "Query parameter renter",
                                             required: false,
                                             type: {
                                                 type: "string",
                                             },
-                                            value: "Successfully submitted",
+                                            value: "1742794505256x890368286827908000",
+                                        },
+                                        {
+                                            name: "first_name",
+                                            in: "query",
+                                            description:
+                                                "Query parameter first_name",
+                                            required: true,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "last_name",
+                                            in: "query",
+                                            description:
+                                                "Query parameter last_name",
+                                            required: true,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "dob",
+                                            in: "query",
+                                            description: "Query parameter dob",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                                format: "date-time",
+                                            },
+                                        },
+                                        {
+                                            name: "middle_name",
+                                            in: "query",
+                                            description:
+                                                "Query parameter middle_name",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "q1",
+                                            in: "query",
+                                            description: "Query parameter q1",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "q2",
+                                            in: "query",
+                                            description: "Query parameter q2",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "q3",
+                                            in: "query",
+                                            description: "Query parameter q3",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "q4",
+                                            in: "query",
+                                            description: "Query parameter q4",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "rent_again",
+                                            in: "query",
+                                            description:
+                                                "Query parameter rent_again (yes/no)",
+                                            required: true,
+                                            type: {
+                                                type: "boolean",
+                                            },
+                                        },
+                                        {
+                                            name: "description",
+                                            in: "query",
+                                            description:
+                                                "Query parameter description",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
                                         },
                                     ],
                                     tags: ["Workflow"],
@@ -1023,18 +1051,7 @@
                                         "Triggers the workflow past_reviews",
                                     parameters: [
                                         {
-                                            name: "renter_id",
-                                            in: "query",
-                                            description:
-                                                "Query parameter renter_id",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "1742555683647x682435536114414100",
-                                        },
-                                        {
-                                            name: "renter_name",
+                                            name: "name",
                                             in: "query",
                                             description:
                                                 "Query parameter renter_name",
@@ -1045,37 +1062,18 @@
                                             value: "Test Zap",
                                         },
                                         {
-                                            name: "rent_decision",
+                                            name: "sort",
                                             in: "query",
                                             description:
-                                                "Query parameter for rent decision",
+                                                "Sorting option (High to Low or Low to High)",
                                             required: false,
                                             type: {
                                                 type: "string",
+                                                enum: [
+                                                    "High to Low",
+                                                    "Low to High",
+                                                ],
                                             },
-                                            value: "No",
-                                        },
-                                        {
-                                            name: "rating_total",
-                                            in: "query",
-                                            description:
-                                                "Query parameter rating_total",
-                                            required: false,
-                                            type: {
-                                                type: "number",
-                                            },
-                                            value: 2.75,
-                                        },
-                                        {
-                                            name: "total_reviews",
-                                            in: "query",
-                                            description:
-                                                "Query parameter total_reviews",
-                                            required: false,
-                                            type: {
-                                                type: "integer",
-                                            },
-                                            value: 3,
                                         },
                                     ],
                                     tags: ["Workflow"],
