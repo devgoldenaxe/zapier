@@ -31,6 +31,508 @@
                         schemes: ["https"],
                         consumes: ["application/json"],
                         paths: {
+                            "/wf/me": {
+                                post: {
+                                    description: "Triggers the workflow me",
+                                    parameters: [],
+                                    tags: ["Workflow"],
+                                    responses: {
+                                        200: {
+                                            description: "Workflow response",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    status: {
+                                                        type: "string",
+                                                        description:
+                                                            "Status of the response",
+                                                        example: "success",
+                                                    },
+                                                    response: {
+                                                        type: "object",
+                                                        properties: {
+                                                            user: {
+                                                                type: "object",
+                                                                properties: {
+                                                                    "Modified Date":
+                                                                        {
+                                                                            type: "number",
+                                                                        },
+                                                                    installAppprompt:
+                                                                        {
+                                                                            type: "integer",
+                                                                        },
+                                                                    "⚙️ Language default":
+                                                                        {
+                                                                            type: "string",
+                                                                        },
+                                                                    "⚙️ Date last verified":
+                                                                        {
+                                                                            type: "number",
+                                                                        },
+                                                                    First: {
+                                                                        type: "string",
+                                                                    },
+                                                                    "Total Paid":
+                                                                        {
+                                                                            type: "number",
+                                                                        },
+                                                                    _id: {
+                                                                        type: "string",
+                                                                    },
+                                                                    "⚙️ Inactive?":
+                                                                        {
+                                                                            type: "boolean",
+                                                                        },
+                                                                    "⚙️ Is developer?":
+                                                                        {
+                                                                            type: "boolean",
+                                                                        },
+                                                                    "Property Type":
+                                                                        {
+                                                                            type: "string",
+                                                                        },
+                                                                    "Owner Type":
+                                                                        {
+                                                                            type: "string",
+                                                                        },
+                                                                    user_signed_up:
+                                                                        {
+                                                                            type: "boolean",
+                                                                        },
+                                                                    "Deleted?":
+                                                                        {
+                                                                            type: "boolean",
+                                                                        },
+                                                                    "First Last":
+                                                                        {
+                                                                            type: "string",
+                                                                        },
+                                                                    authentication:
+                                                                        {
+                                                                            type: "object",
+                                                                            properties:
+                                                                                {
+                                                                                    email: {
+                                                                                        type: "object",
+                                                                                        properties:
+                                                                                            {
+                                                                                                email: {
+                                                                                                    type: "string",
+                                                                                                    format: "email",
+                                                                                                },
+                                                                                                email_confirmed:
+                                                                                                    {
+                                                                                                        type: [
+                                                                                                            "boolean",
+                                                                                                            "null",
+                                                                                                        ],
+                                                                                                    },
+                                                                                            },
+                                                                                    },
+                                                                                },
+                                                                        },
+                                                                    "Subscription Status":
+                                                                        {
+                                                                            type: "string",
+                                                                        },
+                                                                    "Profile picture":
+                                                                        {
+                                                                            type: "string",
+                                                                            format: "uri",
+                                                                        },
+                                                                    "Created Date":
+                                                                        {
+                                                                            type: "number",
+                                                                        },
+                                                                    "⚙️ Date agreed to terms and privacy docs":
+                                                                        {
+                                                                            type: "number",
+                                                                        },
+                                                                    "Park Name":
+                                                                        {
+                                                                            type: "string",
+                                                                        },
+                                                                    Last: {
+                                                                        type: "string",
+                                                                    },
+                                                                    "⚙️ Signup step":
+                                                                        {
+                                                                            type: "integer",
+                                                                        },
+                                                                    "Renters added":
+                                                                        {
+                                                                            type: "integer",
+                                                                        },
+                                                                    "⚙️ Role": {
+                                                                        type: "string",
+                                                                    },
+                                                                    "⚙️ Signup method":
+                                                                        {
+                                                                            type: "string",
+                                                                        },
+                                                                    Location: {
+                                                                        type: "object",
+                                                                        properties:
+                                                                            {
+                                                                                address:
+                                                                                    {
+                                                                                        type: "string",
+                                                                                    },
+                                                                                lat: {
+                                                                                    type: "number",
+                                                                                },
+                                                                                lng: {
+                                                                                    type: "number",
+                                                                                },
+                                                                            },
+                                                                    },
+                                                                    "Park Size":
+                                                                        {
+                                                                            type: "integer",
+                                                                        },
+                                                                    "Reviews Created (total)":
+                                                                        {
+                                                                            type: "integer",
+                                                                        },
+                                                                    "Reviews created (month)":
+                                                                        {
+                                                                            type: "integer",
+                                                                        },
+                                                                    "PAYG fees (month)":
+                                                                        {
+                                                                            type: "number",
+                                                                        },
+                                                                    Slug: {
+                                                                        type: "string",
+                                                                    },
+                                                                    "location (city,state)":
+                                                                        {
+                                                                            type: "object",
+                                                                            properties:
+                                                                                {
+                                                                                    address:
+                                                                                        {
+                                                                                            type: "string",
+                                                                                        },
+                                                                                    lat: {
+                                                                                        type: "number",
+                                                                                    },
+                                                                                    lng: {
+                                                                                        type: "number",
+                                                                                    },
+                                                                                },
+                                                                        },
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+
+                                        400: {
+                                            description: "Workflow failure",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    status: {
+                                                        type: "string",
+                                                        description:
+                                                            "Outcome of the workflow",
+                                                    },
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the workflow",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        401: {
+                                            description: "Permission denied",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        404: {
+                                            description: "Not found",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        405: {
+                                            description: "Wrong method",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        429: {
+                                            description: "Too many requests",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        500: {
+                                            description:
+                                                "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    code: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error code",
+                                                    },
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        503: {
+                                            description: "Service Unavailable",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            "/wf/search": {
+                                get: {
+                                    description: "Triggers the workflow search",
+                                    parameters: [
+                                        {
+                                            name: "first_name",
+                                            in: "query",
+                                            description:
+                                                "Query parameter first_name",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "last_name",
+                                            in: "query",
+                                            description:
+                                                "Query parameter last_name",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "dob",
+                                            in: "query",
+                                            description:
+                                                "Query parameter dob in MM/DD/YYYY format (e.g., 01/01/2000)",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                                format: "date-time",
+                                            },
+                                        },
+                                        {
+                                            name: "middle_name",
+                                            in: "query",
+                                            description:
+                                                "Query parameter middle_name",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                    ],
+                                    tags: ["Workflow"],
+                                    responses: {
+                                        200: {
+                                            description: "Workflow response",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    status: {
+                                                        type: "string",
+                                                        description:
+                                                            "Outcome of the workflow",
+                                                    },
+                                                    error: {
+                                                        type: "string",
+                                                        description:
+                                                            "Outcome of the workflow",
+                                                    },
+                                                    results: {
+                                                        type: "array",
+                                                        items: {
+                                                            type: "object",
+                                                            properties: {
+                                                                "Renter Name": {
+                                                                    type: "string",
+                                                                },
+                                                                "Renter Avearage Rating":
+                                                                    {
+                                                                        type: "string",
+                                                                    },
+                                                                "Total no of ratings":
+                                                                    {
+                                                                        type: "string",
+                                                                    },
+                                                                "Total no of negative reviews":
+                                                                    {
+                                                                        type: "string",
+                                                                    },
+                                                                "Renter ID": {
+                                                                    type: "string",
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        400: {
+                                            description: "Workflow failure",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    status: {
+                                                        type: "string",
+                                                        description:
+                                                            "Outcome of the workflow",
+                                                    },
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the workflow",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        401: {
+                                            description: "Permission denied",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        404: {
+                                            description: "Not found",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        405: {
+                                            description: "Wrong method",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        429: {
+                                            description: "Too many requests",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        500: {
+                                            description:
+                                                "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    code: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error code",
+                                                    },
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        503: {
+                                            description: "Service Unavailable",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
                             "/wf/renterdetails": {
                                 get: {
                                     description:
@@ -40,7 +542,7 @@
                                             name: "renter",
                                             in: "query",
                                             description: "Query parameter id",
-                                            required: true,
+                                            required: false,
                                             type: {
                                                 type: "string",
                                             },
@@ -259,541 +761,6 @@
                                     security: [],
                                 },
                             },
-                            "/wf/search": {
-                                get: {
-                                    description: "Triggers the workflow search",
-                                    parameters: [
-                                        {
-                                            name: "first_name",
-                                            in: "query",
-                                            description:
-                                                "Query parameter first_name",
-                                            required: true,
-                                            type: {
-                                                type: "string",
-                                            },
-                                        },
-                                        {
-                                            name: "last_name",
-                                            in: "query",
-                                            description:
-                                                "Query parameter last_name",
-                                            required: true,
-                                            type: {
-                                                type: "string",
-                                            },
-                                        },
-                                        {
-                                            name: "dob",
-                                            in: "query",
-                                            description: "Query parameter dob",
-                                            required: true,
-                                            type: {
-                                                type: "string",
-                                                format: "date-time",
-                                            },
-                                        },
-                                        {
-                                            name: "middle_name",
-                                            in: "query",
-                                            description:
-                                                "Query parameter middle_name",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                        },
-                                    ],
-                                    tags: ["Workflow"],
-                                    responses: {
-                                        200: {
-                                            description: "Workflow response",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    status: {
-                                                        type: "string",
-                                                        description:
-                                                            "Outcome of the workflow",
-                                                    },
-                                                    error: {
-                                                        type: "string",
-                                                        description:
-                                                            "Outcome of the workflow",
-                                                    },
-                                                    results: {
-                                                        type: "array",
-                                                        items: {
-                                                            type: "object",
-                                                            properties: {
-                                                                "Renter Name": {
-                                                                    type: "string",
-                                                                },
-                                                                "Renter Avearage Rating":
-                                                                    {
-                                                                        type: "string",
-                                                                    },
-                                                                "Total no of ratings":
-                                                                    {
-                                                                        type: "string",
-                                                                    },
-                                                                "Total no of negative reviews":
-                                                                    {
-                                                                        type: "string",
-                                                                    },
-                                                                "Renter ID": {
-                                                                    type: "string",
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        400: {
-                                            description: "Workflow failure",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    status: {
-                                                        type: "string",
-                                                        description:
-                                                            "Outcome of the workflow",
-                                                    },
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the workflow",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        401: {
-                                            description: "Permission denied",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        404: {
-                                            description: "Not found",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        405: {
-                                            description: "Wrong method",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        429: {
-                                            description: "Too many requests",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        500: {
-                                            description:
-                                                "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    code: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error code",
-                                                    },
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        503: {
-                                            description: "Service Unavailable",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                            "/wf/me": {
-                                post: {
-                                    description: "Triggers the workflow me",
-                                    parameters: [],
-                                    tags: ["Workflow"],
-                                    responses: {
-                                        200: {
-                                            description: "Workflow response",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    status: {
-                                                        type: "string",
-                                                        description:
-                                                            "Outcome of the workflow",
-                                                    },
-                                                    response: {
-                                                        type: "object",
-                                                        properties: {
-                                                            user: {
-                                                                type: "string",
-                                                                description:
-                                                                    "user ('user' represented by a unique ID)",
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        400: {
-                                            description: "Workflow failure",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    status: {
-                                                        type: "string",
-                                                        description:
-                                                            "Outcome of the workflow",
-                                                    },
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the workflow",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        401: {
-                                            description: "Permission denied",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        404: {
-                                            description: "Not found",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        405: {
-                                            description: "Wrong method",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        429: {
-                                            description: "Too many requests",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        500: {
-                                            description:
-                                                "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    code: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error code",
-                                                    },
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        503: {
-                                            description: "Service Unavailable",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                            "/wf/booking_renter": {
-                                post: {
-                                    description:
-                                        "Triggers the workflow booking_renter",
-                                    parameters: [
-                                        {
-                                            name: "renter_id",
-                                            in: "query",
-                                            description:
-                                                "Query parameter renter_id",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                            value: "1742794505256x890368286827908000",
-                                        },
-                                        {
-                                            name: "renter_fname",
-                                            in: "query",
-                                            description:
-                                                "Query parameter renter_fname",
-                                            required: true,
-                                            type: {
-                                                type: "string",
-                                            },
-                                        },
-                                        {
-                                            name: "renter_lname",
-                                            in: "query",
-                                            description:
-                                                "Query parameter renter_lname",
-                                            required: true,
-                                            type: {
-                                                type: "string",
-                                            },
-                                        },
-                                        {
-                                            name: "dob",
-                                            in: "query",
-                                            description: "Query parameter dob",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                                format: "date-time",
-                                            },
-                                        },
-                                        {
-                                            name: "renter_mname",
-                                            in: "query",
-                                            description:
-                                                "Query parameter renter_mname",
-                                            required: false,
-                                            type: {
-                                                type: "string",
-                                            },
-                                        },
-                                        {
-                                            name: "start_date",
-                                            in: "query",
-                                            description:
-                                                "Query parameter start_date",
-                                            required: true,
-                                            type: {
-                                                type: "date-time",
-                                            },
-                                        },
-                                        {
-                                            name: "end_date",
-                                            in: "query",
-                                            description:
-                                                "Query parameter end_date",
-                                            required: true,
-                                            type: {
-                                                type: "date-time",
-                                            },
-                                        },
-                                    ],
-                                    tags: ["Workflow"],
-                                    responses: {
-                                        200: {
-                                            description: "Workflow response",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    status: {
-                                                        type: "string",
-                                                        description:
-                                                            "Outcome of the workflow",
-                                                        example:
-                                                            "Booked Successfully",
-                                                    },
-                                                    error: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error details if any",
-                                                    },
-                                                    results: {
-                                                        type: "array",
-                                                        items: {
-                                                            type: "object",
-                                                            properties: {
-                                                                "Booking status":
-                                                                    {
-                                                                        type: "string",
-                                                                        example:
-                                                                            "Booked Successfully",
-                                                                    },
-                                                                "Renter ID": {
-                                                                    type: "string",
-                                                                    example:
-                                                                        "1742794505256x890368286827908000",
-                                                                },
-                                                            },
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        401: {
-                                            description: "Permission denied",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        404: {
-                                            description: "Not found",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        405: {
-                                            description: "Wrong method",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        429: {
-                                            description: "Too many requests",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        500: {
-                                            description:
-                                                "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    code: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error code",
-                                                    },
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        503: {
-                                            description: "Service Unavailable",
-                                            schema: {
-                                                type: "object",
-                                                properties: {
-                                                    message: {
-                                                        type: "string",
-                                                        description:
-                                                            "Error message for the operation",
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                            },
 
                             "/wf/leave_a_review": {
                                 post: {
@@ -815,7 +782,7 @@
                                             in: "query",
                                             description:
                                                 "Query parameter first_name",
-                                            required: true,
+                                            required: false,
                                             type: {
                                                 type: "string",
                                             },
@@ -825,7 +792,7 @@
                                             in: "query",
                                             description:
                                                 "Query parameter last_name",
-                                            required: true,
+                                            required: false,
                                             type: {
                                                 type: "string",
                                             },
@@ -833,7 +800,8 @@
                                         {
                                             name: "dob",
                                             in: "query",
-                                            description: "Query parameter dob",
+                                            description:
+                                                "Query parameter dob in MM/DD/YYYY format (e.g., 01/01/2000)",
                                             required: false,
                                             type: {
                                                 type: "string",
@@ -891,7 +859,7 @@
                                             in: "query",
                                             description:
                                                 "Query parameter rent_again (yes/no)",
-                                            required: true,
+                                            required: false,
                                             type: {
                                                 type: "boolean",
                                             },
@@ -1237,6 +1205,212 @@
                                         },
                                     },
                                     security: [],
+                                },
+                            },
+                            "/wf/booking_renter": {
+                                post: {
+                                    description:
+                                        "Triggers the workflow booking_renter",
+                                    parameters: [
+                                        {
+                                            name: "renter_id",
+                                            in: "query",
+                                            description:
+                                                "Query parameter renter_id",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                            value: "1742794505256x890368286827908000",
+                                        },
+                                        {
+                                            name: "renter_fname",
+                                            in: "query",
+                                            description:
+                                                "Query parameter renter_fname",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "renter_lname",
+                                            in: "query",
+                                            description:
+                                                "Query parameter renter_lname",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "dob",
+                                            in: "query",
+                                            description:
+                                                "Query parameter dob in MM/DD/YYYY format (e.g., 01/01/2000)",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                                format: "date-time",
+                                            },
+                                        },
+                                        {
+                                            name: "renter_mname",
+                                            in: "query",
+                                            description:
+                                                "Query parameter renter_mname",
+                                            required: false,
+                                            type: {
+                                                type: "string",
+                                            },
+                                        },
+                                        {
+                                            name: "start_date",
+                                            in: "query",
+                                            description:
+                                                "Query parameter start_date in MM/DD/YYYY format (e.g., 01/01/2000)",
+                                            required: false,
+                                            type: {
+                                                type: "date-time",
+                                            },
+                                        },
+                                        {
+                                            name: "end_date",
+                                            in: "query",
+                                            description:
+                                                "Query parameter end_date in MM/DD/YYYY format (e.g., 01/01/2000)",
+                                            required: false,
+                                            type: {
+                                                type: "date-time",
+                                            },
+                                        },
+                                    ],
+                                    tags: ["Workflow"],
+                                    responses: {
+                                        200: {
+                                            description: "Workflow response",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    status: {
+                                                        type: "string",
+                                                        description:
+                                                            "Outcome of the workflow",
+                                                        example:
+                                                            "Booked Successfully",
+                                                    },
+                                                    error: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error details if any",
+                                                    },
+                                                    results: {
+                                                        type: "array",
+                                                        items: {
+                                                            type: "object",
+                                                            properties: {
+                                                                "Booking status":
+                                                                    {
+                                                                        type: "string",
+                                                                        example:
+                                                                            "Booked Successfully",
+                                                                    },
+                                                                "Renter ID": {
+                                                                    type: "string",
+                                                                    example:
+                                                                        "1742794505256x890368286827908000",
+                                                                },
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        401: {
+                                            description: "Permission denied",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        404: {
+                                            description: "Not found",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        405: {
+                                            description: "Wrong method",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        429: {
+                                            description: "Too many requests",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        500: {
+                                            description:
+                                                "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    code: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error code",
+                                                    },
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        503: {
+                                            description: "Service Unavailable",
+                                            schema: {
+                                                type: "object",
+                                                properties: {
+                                                    message: {
+                                                        type: "string",
+                                                        description:
+                                                            "Error message for the operation",
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
                                 },
                             },
                         },
