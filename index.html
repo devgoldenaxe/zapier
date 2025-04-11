@@ -42,190 +42,16 @@
                                             schema: {
                                                 type: "object",
                                                 properties: {
-                                                    status: {
+                                                    name: {
                                                         type: "string",
-                                                        description:
-                                                            "Status of the response",
-                                                        example: "success",
+                                                        example:
+                                                            "Goldenaxe Tech",
                                                     },
-                                                    response: {
-                                                        type: "object",
-                                                        properties: {
-                                                            user: {
-                                                                type: "object",
-                                                                properties: {
-                                                                    "Modified Date":
-                                                                        {
-                                                                            type: "number",
-                                                                        },
-                                                                    installAppprompt:
-                                                                        {
-                                                                            type: "integer",
-                                                                        },
-                                                                    "⚙️ Language default":
-                                                                        {
-                                                                            type: "string",
-                                                                        },
-                                                                    "⚙️ Date last verified":
-                                                                        {
-                                                                            type: "number",
-                                                                        },
-                                                                    First: {
-                                                                        type: "string",
-                                                                    },
-                                                                    "Total Paid":
-                                                                        {
-                                                                            type: "number",
-                                                                        },
-                                                                    _id: {
-                                                                        type: "string",
-                                                                    },
-                                                                    "⚙️ Inactive?":
-                                                                        {
-                                                                            type: "boolean",
-                                                                        },
-                                                                    "⚙️ Is developer?":
-                                                                        {
-                                                                            type: "boolean",
-                                                                        },
-                                                                    "Property Type":
-                                                                        {
-                                                                            type: "string",
-                                                                        },
-                                                                    "Owner Type":
-                                                                        {
-                                                                            type: "string",
-                                                                        },
-                                                                    user_signed_up:
-                                                                        {
-                                                                            type: "boolean",
-                                                                        },
-                                                                    "Deleted?":
-                                                                        {
-                                                                            type: "boolean",
-                                                                        },
-                                                                    "First Last":
-                                                                        {
-                                                                            type: "string",
-                                                                        },
-                                                                    authentication:
-                                                                        {
-                                                                            type: "object",
-                                                                            properties:
-                                                                                {
-                                                                                    email: {
-                                                                                        type: "object",
-                                                                                        properties:
-                                                                                            {
-                                                                                                email: {
-                                                                                                    type: "string",
-                                                                                                    format: "email",
-                                                                                                },
-                                                                                                email_confirmed:
-                                                                                                    {
-                                                                                                        type: [
-                                                                                                            "boolean",
-                                                                                                            "null",
-                                                                                                        ],
-                                                                                                    },
-                                                                                            },
-                                                                                    },
-                                                                                },
-                                                                        },
-                                                                    "Subscription Status":
-                                                                        {
-                                                                            type: "string",
-                                                                        },
-                                                                    "Profile picture":
-                                                                        {
-                                                                            type: "string",
-                                                                            format: "uri",
-                                                                        },
-                                                                    "Created Date":
-                                                                        {
-                                                                            type: "number",
-                                                                        },
-                                                                    "⚙️ Date agreed to terms and privacy docs":
-                                                                        {
-                                                                            type: "number",
-                                                                        },
-                                                                    "Park Name":
-                                                                        {
-                                                                            type: "string",
-                                                                        },
-                                                                    Last: {
-                                                                        type: "string",
-                                                                    },
-                                                                    "⚙️ Signup step":
-                                                                        {
-                                                                            type: "integer",
-                                                                        },
-                                                                    "Renters added":
-                                                                        {
-                                                                            type: "integer",
-                                                                        },
-                                                                    "⚙️ Role": {
-                                                                        type: "string",
-                                                                    },
-                                                                    "⚙️ Signup method":
-                                                                        {
-                                                                            type: "string",
-                                                                        },
-                                                                    Location: {
-                                                                        type: "object",
-                                                                        properties:
-                                                                            {
-                                                                                address:
-                                                                                    {
-                                                                                        type: "string",
-                                                                                    },
-                                                                                lat: {
-                                                                                    type: "number",
-                                                                                },
-                                                                                lng: {
-                                                                                    type: "number",
-                                                                                },
-                                                                            },
-                                                                    },
-                                                                    "Park Size":
-                                                                        {
-                                                                            type: "integer",
-                                                                        },
-                                                                    "Reviews Created (total)":
-                                                                        {
-                                                                            type: "integer",
-                                                                        },
-                                                                    "Reviews created (month)":
-                                                                        {
-                                                                            type: "integer",
-                                                                        },
-                                                                    "PAYG fees (month)":
-                                                                        {
-                                                                            type: "number",
-                                                                        },
-                                                                    Slug: {
-                                                                        type: "string",
-                                                                    },
-                                                                    "location (city,state)":
-                                                                        {
-                                                                            type: "object",
-                                                                            properties:
-                                                                                {
-                                                                                    address:
-                                                                                        {
-                                                                                            type: "string",
-                                                                                        },
-                                                                                    lat: {
-                                                                                        type: "number",
-                                                                                    },
-                                                                                    lng: {
-                                                                                        type: "number",
-                                                                                    },
-                                                                                },
-                                                                        },
-                                                                },
-                                                            },
-                                                        },
+                                                    email: {
+                                                        type: "string",
+                                                        format: "email",
+                                                        example:
+                                                            "integration-testing@zapier.com",
                                                     },
                                                 },
                                             },
@@ -550,7 +376,7 @@
                                             name: "rent_again",
                                             in: "query",
                                             description:
-                                                "Query parameter rent_again",
+                                                "Query parameter rent_again (yes/no)",
                                             required: false,
                                             type: {
                                                 type: "boolean",
